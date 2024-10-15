@@ -1,10 +1,10 @@
 import Navbar from "../components/Navbar";
 import React, { useState } from "react";
 import axios from "axios";
+import "../componentStyles/EditProfile.css";
 
 export default function EditProfile() {
   const username = sessionStorage.getItem("username");
-  console.log(username);
   const [formData, setFormData] = useState({
     dob: "",
     gender: "",
@@ -33,8 +33,6 @@ export default function EditProfile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Create FormData object to send the profilePic file
     const updateData = new FormData();
     updateData.append("dob", formData.dob);
     updateData.append("gender", formData.gender);
@@ -55,9 +53,7 @@ export default function EditProfile() {
           },
         }
       );
-
       console.log("Profile updated successfully:", response.data);
-      // Optionally, redirect to profile page or show success message
     } catch (error) {
       console.error("Error updating profile:", error);
     }
@@ -66,11 +62,12 @@ export default function EditProfile() {
   return (
     <div>
       <Navbar />
-      <form onSubmit={handleSubmit} encType="multipart/form-data">
+      <form onSubmit={handleSubmit} encType="multipart/form-data" class="main">
         <label>DOB:</label>
         <input
           type="date"
           name="dob"
+          id="dob"
           value={formData.dob}
           onChange={handleInputChange}
         />
@@ -78,31 +75,34 @@ export default function EditProfile() {
         <br />
 
         <label>GENDER:</label>
-        <label>M</label>
-        <input
-          type="radio"
-          name="gender"
-          value="M"
-          checked={formData.gender === "M"}
-          onChange={handleInputChange}
-        />
-        <label>F</label>
-        <input
-          type="radio"
-          name="gender"
-          value="F"
-          checked={formData.gender === "F"}
-          onChange={handleInputChange}
-        />
-        <label>O</label>
-        <input
-          type="radio"
-          name="gender"
-          value="O"
-          checked={formData.gender === "O"}
-          onChange={handleInputChange}
-        />
-        <br />
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <input
+            type="radio"
+            name="gender"
+            value="M"
+            checked={formData.gender === "M"}
+            onChange={handleInputChange}
+          />
+          <label>M</label>
+          <br />
+          <br />
+          <input
+            type="radio"
+            name="gender"
+            value="F"
+            checked={formData.gender === "F"}
+            onChange={handleInputChange}
+          />
+          <label>F</label>
+          <input
+            type="radio"
+            name="gender"
+            value="O"
+            checked={formData.gender === "O"}
+            onChange={handleInputChange}
+          />
+          <label>O</label>
+        </div>
         <br />
 
         <label>CITY:</label>

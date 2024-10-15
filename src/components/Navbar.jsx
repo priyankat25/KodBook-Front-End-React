@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <>
       <nav>
-        Welcome {username}
+        {username}
         <NavLink to="/home"> News feed </NavLink>
         <NavLink to="/openNewPost"> New post </NavLink>
         <NavLink to="/openProfile"> My profile </NavLink>
