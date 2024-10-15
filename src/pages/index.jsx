@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom"; //React Router hook
-import "../pagesStyles/index.css";
+import "../componentStyles/Index.css";
 
 export default function Index() {
   const [username, setUsername] = useState("");
@@ -65,12 +65,12 @@ export default function Index() {
         <br />
         <NavLink to="/openSignUp">New user? Create account</NavLink>
       </form>
-      {/* <footer>
+      <footer>
         <p>
           &copy; 2024 Tune Trove Music Streaming App | Design and Development.
           All Rights Reserved.
         </p>
-      </footer> */}
+      </footer>
     </div>
   );
 }

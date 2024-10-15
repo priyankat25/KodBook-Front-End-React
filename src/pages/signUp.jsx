@@ -83,7 +83,6 @@ export default function SignUp() {
 
         <label>GENDER: </label>
         <br />
-        <br />
         <input
           type="radio"
           name="gender"
@@ -93,8 +92,6 @@ export default function SignUp() {
           onChange={(event) => setGender(event.target.value)}
         />
         <label htmlFor="gender-m">Male</label>
-        <br />
-        <br />
         <input
           type="radio"
           name="gender"
@@ -104,8 +101,6 @@ export default function SignUp() {
           onChange={(event) => setGender(event.target.value)}
         />
         <label htmlFor="gender-f">Female</label>
-        <br />
-        <br />
         <input
           type="radio"
           name="gender"
@@ -125,12 +120,12 @@ export default function SignUp() {
         <br />
         <NavLink to="/">Already have an account? Login instead</NavLink>
       </form>
-      {/* <footer>
+      <footer>
         <p>
           &copy; 2024 Tune Trove Music Streaming App | Design and Development.
           All Rights Reserved.
         </p>
-      </footer> */}
+      </footer>
     </div>
   );
 }
