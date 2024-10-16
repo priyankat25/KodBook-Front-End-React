@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom"; //React Router hook
-import "../componentStyles/Index.css";
+import "../pagesStyles/Index.css";
 
 export default function Index() {
   const [username, setUsername] = useState("");
@@ -42,8 +42,6 @@ export default function Index() {
           }}
         />
         <br />
-        <br />
-
         <label htmlFor="password">PASSWORD: </label>
         <input
           type="password"
@@ -59,8 +57,6 @@ export default function Index() {
         <br />
 
         <input type="submit" value="SUBMIT" />
-        <br />
-        <br />
         <br />
         <br />
         <NavLink to="/openSignUp">New user? Create account</NavLink>

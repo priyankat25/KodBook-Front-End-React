@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import React, { useState } from "react";
 import axios from "axios";
-import "../componentStyles/EditProfile.css";
+import "../pagesStyles/EditProfile.css";
 
 export default function EditProfile() {
   const username = sessionStorage.getItem("username");
