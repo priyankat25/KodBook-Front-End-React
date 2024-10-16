@@ -67,8 +67,8 @@ export default function Index() {
       </form>
       <footer>
         <p>
-          &copy; 2024 Tune Trove Music Streaming App | Design and Development.
-          All Rights Reserved.
+          &copy; 2024 KodBook Social Media App | Design and Development. All
+          Rights Reserved.
         </p>
       </footer>
     </div>
